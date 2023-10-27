@@ -8,7 +8,7 @@ camera = cv2.VideoCapture(0)
 
 # Define face information (names and ages) for each detected face
 face_info = [
-    {"name": "Nursaid", "age": 18},
+    {"name": "John", "age": 18},
 
     # Add more entries for each detected face as needed
 ]
@@ -29,7 +29,7 @@ while True:
         # Display name and age above the rectangle
     if len(faces) > 0:
      for i, info in enumerate(face_info):
-        face_info_text = f"Name:  {info['name']} | Age: {info['age']}"
+        face_info_text = f"Name: {info['name']} | Age: {info['age']}"
         cv2.putText(frame,  face_info_text,  (x,y - 10 - i * 20),  cv2.FONT_HERSHEY_SIMPLEX,  0.5, (255, 255, 0), 2)
  
             
